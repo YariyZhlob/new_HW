@@ -18,5 +18,6 @@ print(response.status_code)
 print(response.json())
 
 def test_new_employee_creation():
+        print(response.status_code)
         assert response.json()['name'] == 'Sergey'
         assert response.json()['organization'] == 'Advertising'

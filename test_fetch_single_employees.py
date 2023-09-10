@@ -10,7 +10,7 @@ case_3 = ['3', {'employeeId': 3, 'name': 'Anton', 'organization': 'Marketing', '
 
 @pytest.mark.parametrize('emp_id, resp_result', (case_1, case_2, case_3), ids=['first_employee', 'second_employee', 'third_employee'])
 def test_get_first_employee(emp_id, resp_result):
-    API_URL = f'http://127.0.0.1:5000/employees/{emp_id}'
+    API_URL = f'https://employees-api-i9ae.onrender.com/employees/{emp_id}'
     headers = {'Authorization': f'Bearer {BEARER_TOKEN}'}
     response = requests.get(url=API_URL, headers=headers)
     resp_json = response.json()
